@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  dq-checker:
+    build: .
+    restart: always
+    container_name: "dq-checker"
+    ports:
+      - "8080:8080"
