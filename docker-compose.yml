@@ -7,3 +7,5 @@ services:
     container_name: "dq-checker"
     ports:
       - "8080:8080"
+    env_file:
+      - devs.env
