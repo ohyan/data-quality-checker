@@ -29,7 +29,7 @@ RUN pip3 install -r cloud-data-quality/requirements.txt
 WORKDIR /cloud-data-quality
 RUN wget -O clouddq_executable.zip https://github.com/GoogleCloudPlatform/cloud-data-quality/releases/download/v${CLOUDQ_VERSION}/clouddq_executable_v${CLOUDQ_VERSION}_${TARGET_OS}_python${TARGET_PYTHON_INTERPRETER}.zip
 
-ENV GOOGLE_CLOUD_PROJECT {GOOGLE_CLOUD_PROJECT}
+ENV GOOGLE_CLOUD_PROJECT ${GOOGLE_CLOUD_PROJECT}
 ENV CLOUDDQ_BIGQUERY_REGION ${CLOUDDQ_BIGQUERY_REGION}
 ENV CLOUDDQ_BIGQUERY_DATASET ${CLOUDDQ_BIGQUERY_DATASET}
 ENV CLOUD_BIGQUERY_TABLE = ${CLOUD_BIGQUERY_TABLE}
